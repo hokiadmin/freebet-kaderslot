@@ -78,6 +78,9 @@ th{color:#25ff2a}
 <video autoplay muted loop class="video-bg">
   <source src="https://files.catbox.moe/btkj60.mp4" type="video/mp4">
 </video>
+  <audio id="bgsound" loop>
+  <source src="sound.mp3" type="audio/mpeg">
+</audio>
 <div class="overlay"></div>
 
 <div class="wrap">
@@ -135,7 +138,11 @@ DATA_TABEL.forEach((r,i)=>{
     </tr>
   `;
 });
+<script>
+document.body.addEventListener("click", () => {
+  document.getElementById("bgsound").play();
+}, { once: true });
 </script>
-
 </body>
 </html>
+
