@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>INFO FREEBET</title>
+<title>FREEBET KADERSLOT</title>
 
 <style>
 body{
@@ -16,13 +16,14 @@ body{
 /* VIDEO BACKGROUND */
 .video-bg{
   position: fixed;
-  top:50%;
-  left:50%;
-  height: 200vh;      /* kunci di tinggi layar */
-  width: auto;        /* biar tidak melebar */
-  transform: translate(-50%, -50%);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
   z-index:-2;
 }
+
 .overlay{
   position:fixed;
   top:0;
@@ -51,7 +52,7 @@ table{
 }
 th,td{
   padding:10px;
-  border-bottom:1px solid #001f1c;
+  border-bottom:1px solid #333;
   text-align:center
 }
 th{color:#25ff2a}
@@ -61,7 +62,7 @@ th{color:#25ff2a}
   padding:30px;
 }
 .claim-btn{
-  background:#ff0303;
+  background:#22c55e;
   color:#000;
   padding:14px 30px;
   font-size:18px;
@@ -77,22 +78,17 @@ th{color:#25ff2a}
 
 <!-- VIDEO -->
 <video autoplay muted loop class="video-bg">
-  <source src="https://files.catbox.moe/btkj60.mp4" type="video/mp4">
+  <source src="bg.mp4" type="video/mp4">
 </video>
-  <audio id="bgsound" loop>
-  <source src="sound.mp3" type="audio/mpeg">
-</audio>
 <div class="overlay"></div>
 
 <div class="wrap">
 <div class="card">
 
-<div class="title">INFO FREEBET</div>
+<div class="title">FREEBET KADERSLOT</div>
 
 <div class="warning">
-  <b style="color:#eeff00;font-size:28px">WARNING !</b><br><br>
-  INFO FREEBET AKAN DI UMUMKAN PUKUL <b>18.00 WIB</b><br>
-  Kembali lagi nanti dan cek ID kamu ... ^^
+  <b style="color:#fffb00;font-size:28px">CEK ID MU DI BAWAH & SALINK KODE PROMO NYA !</b><br><br>
 </div>
 
 <table>
@@ -145,6 +141,7 @@ const DATA_TABEL = [
   { user:"Raditya", bonus:1555000, kode:"KD1555" },
   { user:"Whayy123", bonus:1555000, kode:"KD1555" },
   { user:"andreaja", bonus:1555000, kode:"KD1555" },
+  { user:"hadir3231", bonus:1555000, kode:"KD1555" },
 ];
 
 const tb = document.getElementById("tbody");
@@ -159,12 +156,7 @@ DATA_TABEL.forEach((r,i)=>{
     </tr>
   `;
 });
-<script>
-document.body.addEventListener("click", () => {
-  document.getElementById("bgsound").play();
-}, { once: true });
 </script>
+
 </body>
 </html>
-
-
