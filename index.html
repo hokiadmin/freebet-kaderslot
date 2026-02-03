@@ -9,7 +9,7 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  color:#fff;
+  color:#ffffff;
   padding:24px;
 }
 
@@ -18,7 +18,7 @@ body{
   position: fixed;
   top:50%;
   left:50%;
-  height: 160vh;      /* kunci di tinggi layar */
+  height: 90vh;      /* kunci di tinggi layar */
   width: auto;        /* biar tidak melebar */
   transform: translate(-50%, -50%);
   z-index:-2;
@@ -30,12 +30,12 @@ body{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,.65);
+  background:rgba(0, 0, 0, 0.514);
   z-index:-1;
 }
 
 .wrap{max-width:1100px;margin:auto}
-.card{background:rgba(0, 0, 0, 0.658);border-radius:16px;overflow:hidden}
+
 .title{padding:20px;text-align:center;font-size:32px;font-weight:bold}
 
 .warning{
@@ -52,7 +52,7 @@ table{
 }
 th,td{
   padding:10px;
-  border-bottom:1px solid #333;
+  border-bottom:1px solid #000000;
   text-align:center
 }
 th{color:#25ff2a}
@@ -62,8 +62,8 @@ th{color:#25ff2a}
   padding:30px;
 }
 .claim-btn{
-  background:#22c55e;
-  color:#000;
+  background:#000000;
+  color:#ffffff;
   padding:14px 30px;
   font-size:18px;
   font-weight:bold;
@@ -91,26 +91,21 @@ th{color:#25ff2a}
 <div class="title"></div>
 
 <div class="warning">
-  <b style="color:#fffb00;font-size:28px">SELAMAT UNTUK 29 ID BERUNTUNG!</b><br><br>
-  CEK & SALIN KODE PROMO KAMU DI BAWAH INI ↓
+  <b style="color:#fffb00;font-size:28px">PERHATIAN!</b><br><br>
+  INFO FREEBET AKAN DI UMUMKAN PUKUL <b>15.00 WIB</b><br>
+  Kembali lagi nanti dan cek ID kamu ... ^^
 </div>
 
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>USER ID</th>
-<th>BONUS</th>
-<th>KODE PROMO</th>
-<th>POLA GACOR</th>
 </tr>
 </thead>
 <tbody id="tbody"></tbody>
 </table>
 
 <div class="claim-area">
-  <a id="claimLink" class="claim-btn" href="#" target="_blank">
-    ✅ KLAIM DISINI
+  
   </a>
 </div>
 
@@ -119,40 +114,12 @@ th{color:#25ff2a}
 
 <script>
 // LINK KLAIM
-const CLAIM_LINK = "https://tinyurl.com/mb479emw";
+const CLAIM_LINK = "";
 document.getElementById("claimLink").href = CLAIM_LINK;
 
 // EDIT TABEL DISINI
 const DATA_TABEL = [
-  { user:"jampangwin", bonus:250000, kode:"rBPeXi5w" },
-  { user:"winompong849", bonus:250000, kode:"Pi0NPFKT" },
-  { user:"januard", bonus:250000, kode:"suRabQzk" },
-  { user:"ikky88", bonus:250000, kode:"a2nGhyxt" },
-  { user:"reno1234", bonus:250000, kode:"cpAhhDfX" },
-  { user:"Adhie81", bonus:250000, kode:"iCb76eAn" },
-  { user:"Guloaren", bonus:250000, kode:"5EEYqYO1" },
-  { user:"bajang22", bonus:200000, kode:"6r10buQ8" },
-  { user:"okha77", bonus:200000, kode:"vfnbrncv" },
-  { user:"Acek92", bonus:200000, kode:"IzngZGsE" },
-  { user:"yogik", bonus:200000, kode:"VEg9xlhV" },
-  { user:"putraputri", bonus:200000, kode:"IzngZGsE" },
-  { user:"kaka323", bonus:200000, kode:"VEg9xlhV" },
-  { user:"agit123", bonus:200000, kode:"IAfB1a47" },
-  { user:"tomang97", bonus:200000, kode:"wy1TAG1f" },
-  { user:"jalu1987", bonus:200000, kode:"HtP1c8UG" },
-  { user:"Novitalia", bonus:200000, kode:"HtP1c8UG" },
-  { user:"Dono338", bonus:200000, kode:"IAfB1a47" },
-  { user:"Oneng007", bonus:200000, kode:"wy1TAG1f" },
-  { user:"sambo3003", bonus:200000, kode:"HtP1c8UG" },
-  { user:"Biii98", bonus:150000, kode:"rBPeXi5w" },
-  { user:"gilang547", bonus:150000, kode:"Pi0NPFKT" },
-  { user:"akasoo8", bonus:150000, kode:"suRabQzk" },
-  { user:"fibranpraset", bonus:150000, kode:"a2nGhyxt" },
-  { user:"machiko30", bonus:150000, kode:"cpAhhDfX" },
-  { user:"Robet46", bonus:150000, kode:"iCb76eAn" },
-  { user:"Kuya097", bonus:150000, kode:"5EEYqYO1" },
-  { user:"Sumyato09", bonus:150000, kode:"6r10buQ8" },
-  { user:"Roam123", bonus:150000, kode:"vfnbrncv" },
+
 ];
 
 const tb = document.getElementById("tbody");
