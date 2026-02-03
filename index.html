@@ -9,7 +9,7 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  color:#fff;
+  color:#ffffff;
   padding:24px;
 }
 
@@ -18,7 +18,7 @@ body{
   position: fixed;
   top:50%;
   left:50%;
-  height: 160vh;      /* kunci di tinggi layar */
+  height: 90vh;      /* kunci di tinggi layar */
   width: auto;        /* biar tidak melebar */
   transform: translate(-50%, -50%);
   z-index:-2;
@@ -30,12 +30,12 @@ body{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,.65);
+  background:rgba(0, 0, 0, 0.514);
   z-index:-1;
 }
 
 .wrap{max-width:1100px;margin:auto}
-.card{background:rgba(0, 0, 0, 0.658);border-radius:16px;overflow:hidden}
+
 .title{padding:20px;text-align:center;font-size:32px;font-weight:bold}
 
 .warning{
@@ -52,7 +52,7 @@ table{
 }
 th,td{
   padding:10px;
-  border-bottom:1px solid #333;
+  border-bottom:1px solid #000000;
   text-align:center
 }
 th{color:#25ff2a}
@@ -62,8 +62,8 @@ th{color:#25ff2a}
   padding:30px;
 }
 .claim-btn{
-  background:#22c55e;
-  color:#000;
+  background:#000000;
+  color:#ffffff;
   padding:14px 30px;
   font-size:18px;
   font-weight:bold;
@@ -88,29 +88,24 @@ th{color:#25ff2a}
 <div class="wrap">
 <div class="card">
 
-<div class="title">FREEBET KADERSLOT</div>
+<div class="title"></div>
 
 <div class="warning">
-  <b style="color:#fffb00;font-size:28px">SELAMAT UNTUK 14 ID BERUNTUNG!</b><br><br>
-  CEK & SALIN KODE PROMO KAMU DI BAWAH INI ↓
+  <b style="color:#fffb00;font-size:28px">PERHATIAN!</b><br><br>
+  INFO FREEBET AKAN DI UMUMKAN PUKUL <b>15.00 WIB</b><br>
+  Kembali lagi nanti dan cek ID kamu ... ^^
 </div>
 
 <table>
 <thead>
 <tr>
-<th>#</th>
-<th>USER ID</th>
-<th>BONUS</th>
-<th>KODE PROMO</th>
-<th>POLA GACOR</th>
 </tr>
 </thead>
 <tbody id="tbody"></tbody>
 </table>
 
 <div class="claim-area">
-  <a id="claimLink" class="claim-btn" href="#" target="_blank">
-    ✅ KLAIM DISINI
+  
   </a>
 </div>
 
@@ -119,25 +114,12 @@ th{color:#25ff2a}
 
 <script>
 // LINK KLAIM
-const CLAIM_LINK = "https://tinyurl.com/mb479emw";
+const CLAIM_LINK = "";
 document.getElementById("claimLink").href = CLAIM_LINK;
 
 // EDIT TABEL DISINI
 const DATA_TABEL = [
-  { user:"Emosian", bonus:1777000, kode:"rBPeXi5w" },
-  { user:"divanaprockt", bonus:1777000, kode:"Pi0NPFKT" },
-  { user:"Juju77", bonus:1777000, kode:"suRabQzk" },
-  { user:"Halimah", bonus:1777000, kode:"a2nGhyxt" },
-  { user:"kunang90", bonus:1777000, kode:"cpAhhDfX" },
-  { user:"sujiwo", bonus:1777000, kode:"iCb76eAn" },
-  { user:"kurniawan16", bonus:1777000, kode:"5EEYqYO1" },
-  { user:"obam", bonus:1666000, kode:"6r10buQ8" },
-  { user:"resa12", bonus:1666000, kode:"vfnbrncv" },
-  { user:"wsl200", bonus:1666000, kode:"IzngZGsE" },
-  { user:"arkha99", bonus:1666000, kode:"VEg9xlhV" },
-  { user:"Bacol1990", bonus:1666000, kode:"IAfB1a47" },
-  { user:"Vvipdan", bonus:1666000, kode:"wy1TAG1f" },
-  { user:"Dzakira", bonus:1666000, kode:"HtP1c8UG" },
+
 ];
 
 const tb = document.getElementById("tbody");
@@ -169,6 +151,3 @@ document.addEventListener("touchstart", startAudio);
 </script>
 </body>
 </html>
-
-
-
