@@ -9,14 +9,14 @@
     <meta property="og:title" content="TARUNA 4D - Lucky Wheel" />
     <meta property="og:description" content="Putar roda keberuntungan dan menangkan hadiah hingga 200 ribu! Gratis dan mudah." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.imgur.com/tXsNoYX.png" />
+    <meta property="og:image" content="https://i.imgur.com/hcyuTHd.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@replit" />
     <meta name="twitter:title" content="TARUNA 4D - Lucky Wheel" />
     <meta name="twitter:description" content="Putar roda keberuntungan dan menangkan hadiah nya." />
-    <meta name="twitter:image" content="https://i.imgur.com/tXsNoYX.png" />
+    <meta name="twitter:image" content="https://i.imgur.com/hcyuTHd.png" />
     <title>TARUNA4D - Spin & Win Lucky Wheel</title>
     <style>
         * {
@@ -800,11 +800,11 @@ function updateSpinButtonState() {
   const userId = document.getElementById("userIdInput").value.trim();
   const ticket = document.getElementById("ticketInput").value.trim();
 
-  const ok = userId.length > 0 && isTicketValid(ticket) && !hasSpun && !isSpin;
+  const ok = userId.length > 0 && isTicketValid(ticket) && !isSpin;
   const btn = document.getElementById("spinBtn");
 
   btn.disabled = !ok;
-  btn.textContent = hasSpun ? "SUDAH SPIN" : (ok ? "SPIN SEKARANG!" : "MASUKKAN TIKET");
+  btn.textContent = ok ? "SPIN SEKARANG!" : "MASUKKAN TIKET";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1014,22 +1014,18 @@ const formattedAmount = PRIZE_AMOUNTS[prizeIndex];
                 // Mark as spun
                 usedTickets.add(ticket);
                 localStorage.setItem("usedTickets", JSON.stringify([...usedTickets]));
-                updateUI();
-                
+                document.getElementById("ticketInput").value = "";
                 // Confetti
                 celebrateWin();
                 
                 isSpin = false;
+updateSpinButtonState();
+
             }, 6000);
         }
 
         function updateUI() {
-    const spinBtn = document.getElementById('spinBtn');
-    const userIdInput = document.getElementById('userIdInput');
-
-    spinBtn.disabled = false;
-    spinBtn.textContent = 'SPIN SEKARANG!';
-    userIdInput.disabled = false;
+  updateSpinButtonState();
 }
 
         function renderWinners() {
