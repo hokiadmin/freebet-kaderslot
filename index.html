@@ -87,13 +87,21 @@
   </div>
 
   <div class="modal" id="prizeModal">
-    <div class="modal-content">
-      <h2 style="margin:0">SELAMAT!</h2>
-      <div style="opacity:.85;margin-top:6px">Anda mendapatkan</div>
-      <div class="prize-amount" id="prizeAmount">IDR 1.000</div>
-      <button type="button" onclick="closeModal()" style="max-width:260px;margin:0 auto">TUTUP</button>
+  <div class="modal-content">
+    <h2 style="margin:0">SELAMAT!</h2>
+    <div style="opacity:.85;margin-top:6px">Anda mendapatkan</div>
+    <div class="prize-amount" id="prizeAmount">IDR 1.000</div>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px">
+      <button type="button" onclick="claimPrize()" style="max-width:260px;margin:0 auto">
+        KLAIM SEKARANG
+      </button>
+      <button type="button" onclick="closeModal()" style="max-width:180px;margin:0 auto;background:rgba(255,255,255,.12);color:#fff">
+        TUTUP
+      </button>
     </div>
   </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
   <script>
@@ -194,7 +202,9 @@
     function closeModal(){
       document.getElementById("prizeModal").classList.remove("show");
     }
-
+function claimPrize() {
+  window.location.href = "https://rb.gy/yl02bc";
+}
     // ====== MAIN ======
     async function startSpin() {
       const userId = document.getElementById("userIdInput").value.trim();
