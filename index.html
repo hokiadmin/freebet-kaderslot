@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,7 +8,7 @@
 
   <style>
     /* ====== CSS kamu boleh pakai yang lama ====== */
-    body{margin:0;font-family:system-ui;background:#5b6d94;color:#fff}
+    body{margin:0;font-family:system-ui;background:#0b1220;color:#fff}
     .container{max-width:1100px;margin:0 auto;padding:20px}
     header{text-align:center;padding:10px 20px 25px}
     .logo-image{height:70px;width:auto;display:block;margin:0 auto 10px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.5))}
@@ -21,7 +22,7 @@
     .wheel-inner.spinning{animation:spin-wheel 6s cubic-bezier(0.15,0,0.15,1) forwards}
     @keyframes spin-wheel{from{transform:rotate(0deg)}to{transform:rotate(var(--rotation))}}
     .wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:linear-gradient(to bottom-right,#FFD700,#B8860B);border:4px solid #664400;z-index:20}
-    .wheel-center::after{content:"";position:absolute;inset:10px;border-radius:50%;background:#00b9f1;border:2px solid #00b9f1}
+    .wheel-center::after{content:"";position:absolute;inset:10px;border-radius:50%;background:#cc0000;border:2px solid #880000}
     .prize-text{position:absolute;font-weight:900;font-size:22px}
     .input-section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px}
     input{width:100%;height:54px;font-size:16px;text-align:center;letter-spacing:1px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.35);color:#ffd700;margin-bottom:12px}
@@ -87,13 +88,6 @@
 
   <div class="modal" id="prizeModal">
     <div class="modal-content">
-    <h1>SELAMAT!</h1>
-    <p>Anda memenangkan hadiah sebesar</p>
-    <div class="prize-amount" id="prizeAmount">IDR 1.000.000</div>
-    <p>Silahkan hubungi CS untuk klaim hadiah anda dengan screenshot ini.</p>
-
-    <button onclick="claimPrize()">KLAIM SEKARANG</button>
-</div>
       <h2 style="margin:0">SELAMAT!</h2>
       <div style="opacity:.85;margin-top:6px">Anda mendapatkan</div>
       <div class="prize-amount" id="prizeAmount">IDR 1.000</div>
@@ -303,19 +297,10 @@ if (!data.ok) {
       document.getElementById("ticketInput").addEventListener("input", updateSpinButtonState);
       updateSpinButtonState();
 
-      const modal = document.getElementById('prizeModal');
-const modalContent = modal.querySelector('.modal-content');
-
-modal.addEventListener('click', () => {
-  modal.classList.remove('show');
-});
-
-modalContent.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
-function claimPrize() {
-  window.location.href = 'https://rb.gy/yl02bc';
-}
+      document.getElementById("prizeModal").addEventListener("click", (e) => {
+        if (e.target.id === "prizeModal") closeModal();
+      });
+    });
   </script>
 </body>
 </html>
