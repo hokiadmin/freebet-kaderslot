@@ -211,18 +211,31 @@
 
       // 1) cek tiket + cek userId di Worker (server-side)
       let data;
-      try {
-        const res = await fetch(TICKET_API, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ticket, userId })
-        });
-        data = await res.json();
-      } catch (e) {
-        isSpin = false;
-        updateSpinButtonState();
-        return alert("Koneksi/Server bermasalah. Coba lagi.");
-      }
+
+const res = await fetch(TICKET_API, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ ticket, userId })
+});
+
+const raw = await res.text();
+console.log("RAW FROM WORKER:", raw);
+
+try {
+  data = JSON.parse(raw);
+} catch (e) {
+  alert("Response worker bukan JSON: " + raw.slice(0,80));
+  isSpin = false;
+  updateSpinButtonState();
+  return;
+}
+
+if (!data.ok) {
+  isSpin = false;
+  updateSpinButtonState();
+  alert(data.msg || "Tiket tidak valid");
+  return;
+}
 
       if (!data || !data.ok) {
         isSpin = false;
